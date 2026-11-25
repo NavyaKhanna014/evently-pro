@@ -324,6 +324,21 @@ body::before{background:#0B0B12}
 @media (prefers-reduced-motion: reduce){
   .hero-art *,.mini-ball *,.marquee-track,.btn-shine::after,.hl{animation:none!important}
 }
+/* Switch banner: a big card that sends visitors to the other site */
+.switch{padding-block:48px 12px}
+.switch-card{position:relative;overflow:hidden;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:30px;padding:36px 40px;border-radius:24px;background:var(--ink);color:#fff;text-decoration:none;border:3px solid var(--gold);box-shadow:0 26px 50px -30px rgba(17,17,20,.7);transition:transform .15s ease,box-shadow .15s ease}
+.switch-card:hover{transform:translateY(-2px);box-shadow:0 30px 56px -28px rgba(17,17,20,.75)}
+.switch-card::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(232,185,78,.35),transparent 70%);pointer-events:none}
+.switch-ico{width:88px;height:88px;border-radius:22px;background:var(--gold);display:grid;place-items:center}
+.switch-ico svg{width:52px;height:52px}
+.switch-tag{display:block;font:700 14px/1 var(--f-head);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-on-dark);margin-bottom:10px}
+.switch-title{display:block;font:800 clamp(28px,3.6vw,42px)/1.15 var(--f-head);letter-spacing:-.01em;color:#fff;text-wrap:balance}
+.switch-title em{font-style:normal;color:var(--gold-on-dark)}
+.switch-text{display:block;margin-top:10px;color:#C9CAD3;font-size:19px;line-height:1.5}
+.switch .btn{position:relative;z-index:1;min-height:66px;padding:16px 30px;font-size:20px;white-space:nowrap}
+.switch .btn svg{width:22px;height:22px}
+@media (max-width:860px){.switch{padding-block:36px 4px}.switch-card{grid-template-columns:auto minmax(0,1fr);gap:18px;padding:26px 22px}.switch .btn{grid-column:1/-1;width:100%}.switch-ico{width:64px;height:64px;border-radius:16px}.switch-ico svg{width:38px;height:38px}}
+@media (max-width:420px){.switch-card{grid-template-columns:1fr}.switch-ico{display:none}}
 </style>
 <meta property="og:title" content="Evently Pro">
 <meta property="og:description" content="3 comparable AV quotes in 2 hours, a named backup vendor on every booking, one GST invoice. Delhi-NCR.">
@@ -435,6 +450,21 @@ body::before{background:#0B0B12}
     </div>
   </section>
   <div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="mg"><span>Stage</span><span class="star">★</span><span>Sound</span><span class="star">★</span><span>Lights</span><span class="star">★</span><span>LED screen</span><span class="star">★</span><span>Truss</span><span class="star">★</span><span>Generator</span><span class="star">★</span><span>Packs from ₹15,000</span><span class="star">★</span><span>3 prices in 2 hours</span><span class="star">★</span><span>Backup vendor ready</span><span class="star">★</span><span>One GST bill</span><span class="star">★</span></div><div class="mg"><span>Stage</span><span class="star">★</span><span>Sound</span><span class="star">★</span><span>Lights</span><span class="star">★</span><span>LED screen</span><span class="star">★</span><span>Truss</span><span class="star">★</span><span>Generator</span><span class="star">★</span><span>Packs from ₹15,000</span><span class="star">★</span><span>3 prices in 2 hours</span><span class="star">★</span><span>Backup vendor ready</span><span class="star">★</span><span>One GST bill</span><span class="star">★</span></div></div></div>
+
+  <!-- SWITCH BANNER -->
+  <section class="switch" aria-label="For vendors">
+    <div class="wrap">
+      <a class="switch-card" href="vendors.html">
+        <span class="switch-ico"><svg viewBox="0 0 48 48" fill="none" stroke="#111114" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h24v21H4z"/><path d="M28 18h9l7 7v7H28z"/><circle cx="12" cy="36" r="4" fill="#fff"/><circle cx="36" cy="36" r="4" fill="#fff"/><path d="M10 18h8M10 24h12"/></svg></span>
+        <span class="switch-body">
+          <span class="switch-tag">For vendors</span>
+          <span class="switch-title">Are you a vendor? <em>Sign up with us!</em></span>
+          <span class="switch-text">Do you rent out stage, sound, lights or LED screens? Get orders on your empty days. Joining is free and you get paid in 48 hours.</span>
+        </span>
+        <span class="btn btn-gold">Sign up as a vendor<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </section>
 
   <!-- WHAT WE ARRANGE -->
   <section class="block" id="what">
