@@ -417,6 +417,21 @@ body::before{background:#0B0B12}
 .next-photos b{color:var(--blue-ink)}
 .back-link{display:inline-flex;align-items:center;gap:8px;color:#fff;font:600 17px/1.2 var(--f-head);text-decoration:none;border-bottom:2px solid var(--gold-on-dark);padding-bottom:3px;margin-top:22px}
 footer a{color:#fff}
+/* Switch banner: a big card that sends visitors to the other site */
+.switch{padding-block:48px 12px}
+.switch-card{position:relative;overflow:hidden;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:30px;padding:36px 40px;border-radius:24px;background:var(--ink);color:#fff;text-decoration:none;border:3px solid var(--gold);box-shadow:0 26px 50px -30px rgba(17,17,20,.7);transition:transform .15s ease,box-shadow .15s ease}
+.switch-card:hover{transform:translateY(-2px);box-shadow:0 30px 56px -28px rgba(17,17,20,.75)}
+.switch-card::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(232,185,78,.35),transparent 70%);pointer-events:none}
+.switch-ico{width:88px;height:88px;border-radius:22px;background:var(--gold);display:grid;place-items:center}
+.switch-ico svg{width:52px;height:52px}
+.switch-tag{display:block;font:700 14px/1 var(--f-head);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-on-dark);margin-bottom:10px}
+.switch-title{display:block;font:800 clamp(28px,3.6vw,42px)/1.15 var(--f-head);letter-spacing:-.01em;color:#fff;text-wrap:balance}
+.switch-title em{font-style:normal;color:var(--gold-on-dark)}
+.switch-text{display:block;margin-top:10px;color:#C9CAD3;font-size:19px;line-height:1.5}
+.switch .btn{position:relative;z-index:1;min-height:66px;padding:16px 30px;font-size:20px;white-space:nowrap}
+.switch .btn svg{width:22px;height:22px}
+@media (max-width:860px){.switch{padding-block:36px 4px}.switch-card{grid-template-columns:auto minmax(0,1fr);gap:18px;padding:26px 22px}.switch .btn{grid-column:1/-1;width:100%}.switch-ico{width:64px;height:64px;border-radius:16px}.switch-ico svg{width:38px;height:38px}}
+@media (max-width:420px){.switch-card{grid-template-columns:1fr}.switch-ico{display:none}}
 </style>
 <meta property="og:title" content="Evently Pro for vendors">
 <meta property="og:description" content="Rent out stage, sound, lights or LED in Delhi-NCR? Join free. Orders on your empty days, money in 48 hours.">
@@ -532,6 +547,21 @@ footer a{color:#fff}
     </div>
   </section>
   <div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="mg"><span>No joining fee</span><span class="star">★</span><span>Paid in 48 hours</span><span class="star">★</span><span>Orders on empty days</span><span class="star">★</span><span>5% only on done jobs</span><span class="star">★</span><span>Ready Pack bookings</span><span class="star">★</span><span>Clear order details</span><span class="star">★</span><span>Backup jobs pay extra</span><span class="star">★</span><span>Free for vendors</span><span class="star">★</span></div><div class="mg"><span>No joining fee</span><span class="star">★</span><span>Paid in 48 hours</span><span class="star">★</span><span>Orders on empty days</span><span class="star">★</span><span>5% only on done jobs</span><span class="star">★</span><span>Ready Pack bookings</span><span class="star">★</span><span>Clear order details</span><span class="star">★</span><span>Backup jobs pay extra</span><span class="star">★</span><span>Free for vendors</span><span class="star">★</span></div></div></div>
+
+  <!-- SWITCH BANNER -->
+  <section class="switch" aria-label="For customers">
+    <div class="wrap">
+      <a class="switch-card" href="index.html#get-prices">
+        <span class="switch-ico"><svg viewBox="0 0 48 48" fill="none" stroke="#111114" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="10" width="36" height="32" rx="5"/><path d="M6 19h36M16 6v8M32 6v8"/><path d="M24 23.5l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z" fill="#fff"/></svg></span>
+        <span class="switch-body">
+          <span class="switch-tag">For customers</span>
+          <span class="switch-title">Planning an event? <em>Book with us!</em></span>
+          <span class="switch-text">Need stage, sound, lights or an LED screen for a wedding, party or office event? Get 3 prices on WhatsApp in 2 hours. It's free.</span>
+        </span>
+        <span class="btn btn-gold">Get 3 free prices<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </section>
 
   <!-- WHY JOIN -->
   <section class="block" id="why">
